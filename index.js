@@ -625,18 +625,22 @@ function addDomEvents() {
   });
 
   // //leave Meeting Button
-  $("#leaveCall").click(async () => {
-    participants = new Map(meeting.participants);
-    meeting.leave();
-    window.location.reload();
-    document.getElementById("home-page").style.display = "flex";
-  });
+//   $("#leaveCall").click(async () => {
+//     participants = new Map(meeting.participants);
+//     meeting.leave();
+//     window.location.reload();
+//     document.getElementById("home-page").style.display = "flex";
+//   });
 
   //end meeting button
   $("#endCall").click(async () => {
-    confirm("hehe");
-    meeting.end();
-    window.location.reload();
+    if( confirm("hehe")==true){
+        window.location.reload();
+        meeting.end();
+    }
+    
+ 
+
   });
 
   // //startVideo button events [playing VIDEO.MP4]
